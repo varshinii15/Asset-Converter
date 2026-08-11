@@ -1,0 +1,9 @@
+services:
+  asset-converter:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - MAX_UPLOAD_MB=200
+      - VIDEO_CONCURRENCY=2
+    restart: unless-stopped
